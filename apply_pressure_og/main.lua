@@ -1,4 +1,4 @@
-gdebug.log_info("Apply Pressure: main")
+gdebug.log_info("Apply Pressure OG: main")
 local mod = game.mod_runtime[game.current_mod]
 
 -- Useful variables we will access alot.
@@ -97,8 +97,6 @@ function mod.bleed_stop()
     local part_name = body_part_names[part_id] or "limb" -- Fallback to generic if not mapped
     local dur = you:get_effect_dur(EffectTypeId.new("bleed"), worst_bp) -- Duration of bleed effect
     local int = you:get_effect_int(EffectTypeId.new("bleed"), worst_bp) -- Intensity of bleed
-    gapi.add_msg(tostring(dur))
-    gapi.add_msg(tostring(dur-TimeDuration.from_hours(1)))
 
     -- Calculate encumbrance penalty from both hands. High encumbrance = less effective.
     local penalty = you:get_part_encumbrance(BodyPartTypeId.new("hand_r")) 
