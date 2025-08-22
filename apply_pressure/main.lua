@@ -97,8 +97,8 @@ function mod.bleed_stop()
         -- Apply pressure successfully.
         local part_name = body_part_names[part_id] or "limb" -- Fallback to generic if not mapped
         gapi.add_msg(MsgType.info, string.format(
-            "You apply pressure to your %s in an attempt to stop the bleeding!",
-            part_name))
+            "You apply pressure to your %s in an attempt to stop the bleeding! (-%s)",
+            part_name, tostring(difference)))
         mod_duration(dur + difference, int, worst_bp)
         -- Practice first aid (better XP on success).
         you:practice(fa_skill, 1, 2, false)
