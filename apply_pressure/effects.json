@@ -87,7 +87,7 @@
       "Blood is gushing from you like a fountain."
     ],
     "main_parts_only": true,
-    "apply_message": "You're bleeding!",
+    "//": "we remove the apply_message because it spams chat. player should notice in the top right health indicator hopefully",
     "rating": "bad",
     "max_intensity": 40,
     "int_dur_factor": 60,
